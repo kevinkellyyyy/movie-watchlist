@@ -34,12 +34,14 @@ const SearchMoviePage = () => {
           </div>
 
 
-          {results.length > 0 && (
+          {results.length > 0 ? (
             <ul className="results">
               {results.map((movie) => (
                 <li key={movie.id}><ResultCard movie={movie}/></li>
               ))}
             </ul>
+          ) : (
+            <h2 className='movie-page no-movies'>No results found</h2>
           )}
         </div>
       </div>
